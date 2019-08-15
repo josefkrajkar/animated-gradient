@@ -6,9 +6,14 @@ To send colors to the component, use either prop colors (where you will send arr
 
 ## Props
 
-[colors, required *, number[][], arrays of numbers representing color channels (rgba)]
-[hexcolors, required *, string[], array of strings representing hex values of colors]
-[variant, not-required, linear | radial, variant of the used gradient]
-[vector, not-required, number, vector of linear gradient]
-[coords, not-required, number[], X and Y coordinates of the center of rdial gradient]
-[timer, required, number, duration of the animation]
+|  Prop  |  Required  |  Type  |  Descriptionq  |
+| :--------: |:---------:| -----:| ---------------------|
+|  colors  |  required *  |  number[][]  |  arrays of numbers representing color channels (rgba)  |
+|  hexcolors  |  required *  |  string[]  |  array of strings representing hex values of colors  |
+|  variant  |  not-required  |  linear / radial  |  variant of the used gradient  |
+|  vector  |  not-required  |  number  |  vector of linear gradient  |
+|  coords  |  not-required  |  number[]  |  X and Y coordinates of the center of rdial gradient  |
+|  timer  |  required  |  number  |  duration of the animation  |
+
+
+* Either prop colors or hexcolors is required.
