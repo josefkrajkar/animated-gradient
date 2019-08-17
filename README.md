@@ -6,7 +6,7 @@ To send colors to the component, use either prop colors (where you will send arr
 
 ## Props
 
-|  Prop  |  Required  |  Type  |  Descriptionq  |
+|  Prop  |  Required  |  Type  |  Description  |
 | :--------: |:---------:| -----:| ---------------------|
 |  colors  |  required *  |  number[][]  |  arrays of numbers representing color channels (rgba)  |
 |  hexcolors  |  required *  |  string[]  |  array of strings representing hex values of colors  |
