@@ -12,7 +12,7 @@ To send colors to the component, use either prop colors (where you will send arr
 |  hexcolors  |  required *  |  string[]  |  array of strings representing hex values of colors  |
 |  variant  |  not-required  |  linear / radial  |  variant of the used gradient  |
 |  vector  |  not-required  |  number  |  vector of linear gradient  |
-|  coords  |  not-required  |  number[]  |  X and Y coordinates of the center of rdial gradient  |
+|  coords  |  not-required  |  number[]  |  X and Y coordinates of the center of radial gradient  |
 |  timer  |  required  |  number  |  duration of the animation  |
 
 
