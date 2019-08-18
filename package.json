@@ -1,12 +1,18 @@
 {
   "name": "animated-gradient",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "private": false,
   "main": "build/index.js",
   "license": "MIT",
   "author": {
     "name": "Josef Krajkář",
     "email": "josef.krajkar@mensa.cz"
+  },
+  "keywords": [
+    "react","gradient","animation","component"
+  ],
+  "repository": {
+    "url": "https://github.com/josefkrajkar/animated-gradient"
   },
   "dependencies": {
     "@types/color-convert": "^1.9.0",
