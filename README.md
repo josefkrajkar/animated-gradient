@@ -15,5 +15,8 @@ To send colors to the component, use either prop colors (where you will send arr
 |  coords  |  not-required  |  number[]  |  X and Y coordinates of the center of radial gradient  |
 |  timer  |  required  |  number  |  duration of the animation  |
 
-
 * Either prop colors or hexcolors is required.
+
+## Demo
+Github: [link](https://github.com/josefkrajkar/animated-gradient-demo)
+Live Example: [link](http://grandiose-activity.surge.sh/)
