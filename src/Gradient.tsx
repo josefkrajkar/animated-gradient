@@ -2,13 +2,6 @@ import * as React from 'react';
 
 import {normalizeColors, getBackground, checkArrayEquality} from './helpers';
 
-let step: number[][] | undefined;
-let timer = 0;
-let interval: number | undefined;
-let colors: number[][] | undefined;
-let vector: number | undefined;
-let coords: number[] | undefined = [0,0];
-
 interface Props {
   colors?: number[][];
   hexcolors?: string[];
@@ -27,6 +20,13 @@ interface State {
 }
 
 export default class Gradient extends React.Component<Props, State> {
+  private interval: number | undefined;
+  private step: number[][] | undefined;
+  private timer = 0;
+  private colors: number[][] | undefined;
+  private vector: number | undefined;
+  private coords: number[] | undefined = [0,0];
+
   constructor(props: Props) {
     super(props);
     this.state = {
@@ -46,37 +46,37 @@ export default class Gradient extends React.Component<Props, State> {
     ) {
       if (this.props.timer) {
 
-        if (interval !== undefined) {
-          window.clearInterval(interval);
-          timer = 0;
+        if (this.interval !== undefined) {
+          window.clearInterval(this.interval);
+          this.timer = 0;
         }
 
-        colors = [...this.state.colors!];
-        step = this.state.colors!.map((itemA: number[], keyA: number) => {
+        this.colors = [...this.state.colors!];
+        this.step = this.state.colors!.map((itemA: number[], keyA: number) => {
           return itemA.map((itemB: number, keyB: number) => {
             return (itemB - normalizeColors(this.props.colors, this.props.hexcolors)[keyA][keyB]) / (this.props.timer! / 10);
           })
         });
-        vector = this.state.vector;
-        coords = this.state.coords;
+        this.vector = this.state.vector;
+        this.coords = this.state.coords;
 
-        interval = window.setInterval(() => {
-          colors = colors!.map((itemA: number[], keyA: number) => {
+        this.interval = window.setInterval(() => {
+          this.colors = this.colors!.map((itemA: number[], keyA: number) => {
             return itemA.map((itemB, keyB) => {
-              return itemB - step![keyA][keyB]
+              return itemB - this.step![keyA][keyB]
             })
           });
 
           if (this.state.vector && this.props.vector) {
-            vector = vector! - ((this.state.vector - this.props.vector) / (this.props.timer! / 10));
+            this.vector = this.vector! - ((this.state.vector - this.props.vector) / (this.props.timer! / 10));
           }
 
           if (this.state.coords && this.props.coords) {
-            coords = [coords![0] - ((this.state.coords[0] - this.props.coords[0]) / ((this.props.timer!) / 10)),coords![1] - ((this.state.coords[1] - this.props.coords[1]) / ((this.props.timer!) / 10))];
+            this.coords = [this.coords![0] - ((this.state.coords[0] - this.props.coords[0]) / ((this.props.timer!) / 10)),this.coords![1] - ((this.state.coords[1] - this.props.coords[1]) / ((this.props.timer!) / 10))];
           }
 
-          timer += 10;
-          this.setState({...this.state, colors, vector, coords});
+          this.timer += 10;
+          this.setState({...this.state, colors: this.colors, vector: this.vector, coords: this.coords});
         }, 10);
 
       } else {
@@ -91,25 +91,25 @@ export default class Gradient extends React.Component<Props, State> {
   };
 
   componentWillUnmount() {
-    window.clearInterval(interval);
-    interval = undefined;
-    timer = 0;
-    step = undefined;
-    colors = undefined;
-    vector = undefined;
-    coords = [0,0]; 
+    window.clearInterval(this.interval);
+    this.interval = undefined;
+    this.timer = 0;
+    this.step = undefined;
+    this.colors = undefined;
+    this.vector = undefined;
+    this.coords = [0,0]; 
   };
 
   public render() {
 
-    if (timer === this.props.timer) {
-      window.clearInterval(interval);
-      interval = undefined;
-      timer = 0;
-      step = undefined;
-      colors = undefined;
-      vector = undefined;
-      coords = [0,0];
+    if (this.timer === this.props.timer) {
+      window.clearInterval(this.interval);
+      this.interval = undefined;
+      this.timer = 0;
+      this.step = undefined;
+      this.colors = undefined;
+      this.vector = undefined;
+      this.coords = [0,0];
     }
 
     return (
