@@ -2,7 +2,7 @@
 
 This is a simple React component for state controlled animated gradient inside of the div element. Component is able to receive all the props and is fully stylable (But remember, that if you change the style of background-image, the gradient will not work).
 
-To send colors to the component, use either prop colors (where you will send array of array with numbers as color channels - [r,g,b,alpha], for example: [255,43,12,0.5] for one color), or hexcolors, where you can define colors as array of arrays with strings ['ff0000', '009900'].
+To send colors to the component, use either prop colors (where you will send array of arrays of numbers as color channels - [r,g,b,alpha], for example: [255,43,12,0.5] for one color), or hexcolors, where you can define colors as array of strings ['ff0000', '009900'].
 
 ## Props
 
