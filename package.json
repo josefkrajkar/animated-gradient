@@ -9,35 +9,35 @@
     "email": "josef.krajkar@mensa.cz"
   },
   "keywords": [
-    "react","gradient","animation","component","typescript"
+    "react",
+    "gradient",
+    "animation",
+    "component",
+    "typescript"
   ],
   "repository": {
     "url": "https://github.com/josefkrajkar/animated-gradient"
   },
-  "dependencies": {
-    "@types/color-convert": "^1.9.0",
-    "color-convert": "^2.0.0",
-    "react": "^16.8.6",
-    "react-scripts-ts": "3.1.0"
-  },
   "scripts": {
     "build": "npx tsc --skipLibCheck",
-    "eject": "react-scripts-ts eject"
+    "eject": "npx react-scripts-ts eject"
   },
   "devDependencies": {
-    "@types/color-convert": "^1.9.0",
     "@types/jest": "^24.0.16",
     "@types/node": "^12.6.9",
     "@types/react": "^16.9.2",
-    "typescript": "^3.5.3"
+    "typescript": "^4.2.2"
   },
   "peerDependencies": {
-    "@types/color-convert": "^1.9.0",
     "@types/jest": "^24.0.16",
     "@types/node": "^12.6.9",
     "@types/react": "^16.8.24",
-    "typescript": "^3.5.3",
-    "color-convert": "^2.0.0",
-    "react": "^16.8.6"
+    "typescript": "^4.2.2"
+  },
+  "dependencies": {
+    "@types/color-convert": "^2.0.0",
+    "color-convert": "^2.0.1",
+    "react": "^17.0.1",
+    "react-scripts": "^4.0.3"
   }
 }
