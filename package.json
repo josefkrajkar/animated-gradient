@@ -16,7 +16,7 @@
     "typescript"
   ],
   "repository": {
-    "url": "https://github.com/josefkrajkar/animated-gradient"
+    "url": "git+https://github.com/josefkrajkar/animated-gradient.git"
   },
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
