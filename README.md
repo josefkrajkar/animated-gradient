@@ -20,4 +20,4 @@ To send colors to the component, use either prop colors (where you will send arr
 ## Demo
 
 Github: [link](https://github.com/josefkrajkar/animated-gradient-demo)
-Live Example: [link](http://grandiose-activity.surge.sh/)
+Live Example: [link](https://green-world.surge.sh/)
