@@ -68,7 +68,7 @@ export function checkArrayEquality(
  * @param alpha - An optional number representing the alpha value.
  * @returns An array of four numbers representing the RGBA values.
  */
-function hexToRgba(hex: string, alpha = 1) {
+export function hexToRgba(hex: string, alpha = 1) {
   hex = hex.replace('#', '');
 
   const r = parseInt(hex.substring(0, 2), 16);
